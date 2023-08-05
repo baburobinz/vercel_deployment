@@ -1,0 +1,94 @@
+body{
+
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+.main_container{
+
+    display:grid;
+    place-items: center;
+
+    width:100vw;
+    height:100vh;
+    background-color: rgb(190, 187, 187);
+    
+
+}
+
+.login_form{
+
+    display:grid;
+    place-items: center;
+    position: relative;
+    gap:20px;
+    flex-wrap: wrap;
+    
+    background: linear-gradient(90deg, rgba(2,37,50,1) 0%, rgba(153,19,134,1) 100%);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    width:20%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px ;
+   
+
+    
+}
+
+.login_form>input{
+
+   padding:8px;
+   width:80%;
+   border-radius: 5px;
+}
+
+h2{
+
+    color:white;
+    font-weight:bolder;
+}
+
+
+.login_form>button{
+
+    padding:6px;
+    border-radius: 5px;
+    background-color: green;
+    color:white;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
+
+.login_form>p{
+
+    color:white;
+}
+
+.login_form a{
+
+    text-decoration: none;
+    font-weight: bolder;
+    color:rgb(14, 255, 183)
+}
+
+
+
+/* invalid username or ppassword message */
+
+.message{
+
+    display:grid;
+    place-items: center;
+    position: absolute;
+    bottom:20px;
+    padding:10px;
+    color:red;
+    background-color: rgb(234, 211, 211);
+    border-radius: 5px;
+}

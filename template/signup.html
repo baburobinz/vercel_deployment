@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="{%static 'css/sign.css'%}">
+</head>
+<body>
+
+
+
+    <div class="main_container">
+
+
+        <form action="create_user" class="signUpForm" method="POST">
+
+
+            <h2>SIGN UP</h2>
+
+            {%csrf_token%}
+
+            <input type="text" name="username" id="user_name" placeholder="Username" required value="{{uname}}">
+            <input type="text" name="mobile" id="" placeholder="Mobile" pattern="[0-9]{10}" value="{{mob}}">
+            <input type="email" name="email" id="" placeholder="Email" required value="{{email}}">
+            <input type="password" name="password" placeholder="Password" required id="pword" value="{{password}}">
+            <input type="text" name="confirm" placeholder="Confirm Password" id="cnfpword" onchange="onChange()" value="{{password}}">
+            <button>SignUp</button>
+
+            <p>Already have an account.? <a href="login_view">Login</a></p>
+
+            {%if message%}
+            <div class="message">{{message}}</div>
+
+
+            <style>
+                #user_name{
+
+                    background:rgb(244, 168, 168);
+                    border: 1px solid red;
+                }
+            </style>
+
+            {%endif%}
+            
+        </form>
+    </div>
+
+
+
+    <!-- my js -->
+
+   
+    <script src="{%static 'js/sign.js'%}"></script>
+
+
+    
+</body>
+</html>

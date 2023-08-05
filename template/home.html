@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{%static 'css/home.css'%}">
+
+    <!-- font awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+
+</head>
+<body>
+
+
+    <div class="main_container">
+
+
+        <div class="nav_bar">
+        
+            <a href="log_out"><button>Logout</button></a>
+
+        </div>
+
+
+        <div class="content_wrapper">
+
+            
+
+            <div id="icon_wrapper"><i class="fa fa-plus" aria-hidden="true" id="add_icon"></i></div>
+
+            
+
+            <form action="add_todo_list" method="POST" class="add_todo_form" id="to_do_form">
+
+                {%csrf_token%}
+
+                <input type="text" name="title" placeholder="Title" required id="title">
+                <textarea name="description"cols="30" rows="10" id="description" placeholder="Type Activity" required></textarea>
+                <button class="button_save">Save</button>
+
+            </form>
+
+
+
+           
+
+
+        <div class="sub_content_wrapper">
+
+            {%if todo|length > 0%}
+
+            {%for i in todo%}
+
+
+            <div class="todo_container">
+
+                <div class="title_descript"><p class="title">{{i.title}}</p><p class="desc">{{i.description}}</p></div>
+
+                <div class="edit_delete_container">
+
+                    <button id="edit" value="{{i.id}}">Edit</button>
+                    <button class="Delete" value="{{i.id}}">Delete</button>
+                </div>
+            </div>
+
+            {%endfor%}
+
+            {%else%}
+
+            <h2 class="add_to_do_list">Add to do list</h2>
+            {%endif%}
+
+
+
+            <div class="delete_confirm_window">
+
+                <h4>Do you want to delete.?</h4>
+
+                <div><a href="" id="yes">Yes</a>
+                
+                <a href="" id="no">No</a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+            
+
+            
+
+            
+
+            
+            
+            
+
+
+        </div>
+
+    </div>
+
+
+    
+    <!-- my js -->
+
+    <script src="{%static 'js/home.js'%}"></script>
+
+   
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+body{
+
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.main_container{
+
+    width:100vw;
+    height:100vh;
+    background-color: rgb(190, 187, 187);
+    display:grid;
+    place-items: center;
+}
+
+.signUpForm{
+
+    display:grid;
+    place-items: center;
+    position:relative;
+    background: linear-gradient(90deg, rgba(2,37,50,1) 0%, rgba(153,19,134,1) 100%);
+
+    
+    width:25%;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px ;
+    gap:10px;
+
+
+
+}
+
+
+.signUpForm>input{
+
+    width:80%;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.signUpForm>button{
+
+    padding:8px;
+    border-radius: 5px;
+    background-color: green;
+    color:white;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+.signUpForm>h2{
+
+    color:white;
+    font-weight: bolder;
+}
+
+.signUpForm>p{
+
+    color:white;
+
+}
+
+.signUpForm a{
+
+    text-decoration: none;
+    font-weight: bolder;
+    color:rgb(14, 255, 183)
+}
+
+
+
+/* User already exist message */
+
+.message{
+
+    display:grid;
+    place-items: center;
+    position: absolute;
+    bottom:20px;
+    padding:10px;
+    color:red;
+    background-color: rgb(234, 211, 211);
+    border-radius: 5px;
+}
