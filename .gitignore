@@ -1,0 +1,21 @@
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+manage.py
+
+# PyCharm
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Database backups
+*.bak
+
+# Local settings
+settings_local.py
+
+# Virtual environment
+venv/

@@ -8,8 +8,8 @@ class UserMobile(models.Model):
 
     mobile = models.CharField(max_length=10)
 
-
     def __str__(self):
+       
        return self.user.username
 
 

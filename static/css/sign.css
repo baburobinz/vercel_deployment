@@ -89,3 +89,26 @@ body{
     background-color: rgb(234, 211, 211);
     border-radius: 5px;
 }
+
+
+@media (max-width:576px){
+
+
+.signUpForm{
+
+   
+    width:60%;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px ;
+    gap:10px;
+
+
+
+}
+
+}
